@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+  <h1 class="text-center">Dashboard</h1>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <p>Welcome <code>{{name}}</code>!</p>
+      <p>This is your homepage. Your user id <code>{{id}}</code>.</p>
+      
+      <p>You are a regular user. Please ask an admin to upgrade your privlages 
+      to get more functionality.
+       </p>
+    </div>
+  </div>
+{% endblock %}

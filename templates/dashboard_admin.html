@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+  <h1 class="text-center">Dashboard</h1>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <p>Welcome <code>{{name}}</code>!</p>
+      <p>This is your homepage. Your user id <code>{{ id }}</code>.</p>
+      
+      <p>You are an Admin user. To access user management tools please use the links below.
+       </p>
+    </div>
+  </div>
+
+  <!-- User MGMT Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Admin Tools</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- User MGMT Section Content-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_upgrade">
+                        <i class="fas fa-download mr-2"></i>
+                        Upgrade User Privlages  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_mgmt">
+                        <i class="fas fa-download mr-2"></i>
+                        User Management Tool  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_new">
+                        <i class="fas fa-download mr-2"></i>
+                        Add New User  
+                    </a>
+                </div>
+
+        </section>
+{% endblock %}

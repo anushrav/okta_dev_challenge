@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}Add User{% endblock %}
+
+{% block body %}
+  <h1 class="text-center">Add New User</h1>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <p>Please provide the following information to add a new user</p>
+      <p>Please follow the following policies for credentials:</p>
+      <p>Names should have 6 characters or more.</p>
+      <p>Password must use 8 or more characters and connot have aspects of username in it.</p>
+      <p>Email should have 6 characters or more.</p>
+      <p>Passowrds must match.</p>
+    </div>
+  </div>
+  
+    <form action="/user_new" method="post" validate>
+        <p>
+            {{ form.firstName.label }}<br>
+            {{ form.firstName(size=32) }}
+        </p>
+        <p>
+            {{ form.lastName.label }}<br>
+            {{ form.lastName(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}
+        </p>
+         <p>
+            {{ form.confirm.label }}<br>
+            {{ form.confirm(size=32) }}
+        </p>
+
+       
+        <p>{{ form.submit() }}</p>
+    </form>
+  
+<!-- User MGMT Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Admin Tools</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- User MGMT Section Content-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_upgrade">
+                        <i class="fas fa-download mr-2"></i>
+                        Upgrade User Privlages  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_mgmt">
+                        <i class="fas fa-download mr-2"></i>
+                        User Management Tool  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_new">
+                        <i class="fas fa-download mr-2"></i>
+                        Add New User  
+                    </a>
+                </div>
+
+        </section>
+{% endblock %}

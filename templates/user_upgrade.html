@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}User Upgrade{% endblock %}
+
+{% block body %}
+  <h1 class="text-center">Upgrade User Privlages</h1>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <p>Please select the regular user you would like to add to the Admin Group.</p>
+    </div>
+  </div>
+ 
+      <table>
+        <tr>
+            <th id = "first_name">First Name</th>
+            <th id = "last_name">Last Name</th>
+            <th id = "email">Email</th>
+            <th id = "action">Action</th>
+        </tr>
+        
+         <tbody>
+         {% for item in items %}
+             <tr>
+                <td headers="first_name">{{ item['first_name']}}</td>
+                <td  headers="last_name">{{ item['last_name']}}</td>
+                <td  headers="email">{{ item['email']}}</td>
+                <td headers="action">
+                    
+                    <form action="/up_user" method="post">
+                        <button class="btn btn-xl btn-outline-dark" type='submit' name='Add to Admin' value="{{  item['id']  }}" >
+                            <span class="glyphicon glyphicon-trash"></span> Add to Admins</button> </form>
+                    </form>
+
+                </td>
+            </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+    </div>
+    <!-- User MGMT Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Admin Tools</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- User MGMT Section Content-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_upgrade">
+                        <i class="fas fa-download mr-2"></i>
+                        Upgrade User Privlages  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_mgmt">
+                        <i class="fas fa-download mr-2"></i>
+                        User Management Tool  
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="/user_new">
+                        <i class="fas fa-download mr-2"></i>
+                        Add New User  
+                    </a>
+                </div>
+
+        </section>
+{% endblock %}
