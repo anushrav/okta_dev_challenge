@@ -5,7 +5,7 @@ This app is biult with Flask as the backend and HTML and CSS for webpages.
 
 ## Getting Started
 
-These instructions are unix-like systems. 
+These instructions are for unix-like systems. 
 
 ### Pre-requisites:
 - Python (3.6<)
@@ -16,6 +16,8 @@ These instructions are unix-like systems.
   - Create an App and copy the cleint credentials.  
   - Add `Login redirect URIs` and `Initiate login URI ` as `http://localhost:8080/oidc/callback`
   - Add `Logout redirect URIs` as `http://localhost:8080`
+  - Generate an API Token from the API tab. 
+  - Make sure to enable CORS and redirect options.
 
 2. Clone this repository, jump to the root folder by running and install dependencies.
 ```
@@ -50,3 +52,22 @@ OKTA_API_TOKEN={api-token-from-dev-portal}
 ADMIN_GROUP_ID={group-id-for-admin-group}
 APP_SECRET={long-random-string}
 ```
+
+5. To start the application run `python3 main.py` from the root directory of the project. 
+   Navigate to `http://localhost:8080/` to view the homepage. If configured correctly, 
+   the application will allow your users and admins to login securely. 
+   
+   
+## Notes:
+1. Regular users have access to thier dashboard Page only.
+2. Admins have access to thier dashbaord page and user management tools.
+3. Only the open landing page `http://localhost:8080/` is accessible without authentication.
+
+
+## Reffernces:
+1. Okta Python SDK: https://github.com/okta/okta-sdk-python/
+2. Flask Tutorial: Simple User Registration and Login: https://developer.okta.com/blog/2018/07/12/flask-tutorial-simple-user-registration-and-login
+3. Flask Documentation: https://flask.palletsprojects.com/en/1.1.x/
+   
+
+
