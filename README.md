@@ -1,14 +1,15 @@
 # okta_dev_challenge
 This repository hosts the code written by Anushrav Vatsa for a technical exercise. 
 This application leverages Okta's authentication services and web API to manage users.
-This app is biult with Flask as the backend and HTML and CSS for webpages.
+This app is built with Flask as the backend and HTML and CSS for webpages.
 
 ## Getting Started
 
 These instructions are for unix-like systems. 
 
-### Pre-requisites:
+### Pre-requisites to run this code:
 - Python (3.6<)
+- Okta Developer Account
 
 
 ### Setup 
