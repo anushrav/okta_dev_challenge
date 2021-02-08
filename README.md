@@ -66,8 +66,9 @@ APP_SECRET={long-random-string}
 
 ## Reffernces:
 1. Okta Python SDK: https://github.com/okta/okta-sdk-python/
-2. Flask Tutorial: Simple User Registration and Login: https://developer.okta.com/blog/2018/07/12/flask-tutorial-simple-user-registration-and-login
-3. Flask Documentation: https://flask.palletsprojects.com/en/1.1.x/
+2. Okta Web Api: https://developer.okta.com/docs/api/resources/users.html
+3. Flask Tutorial: Simple User Registration and Login: https://developer.okta.com/blog/2018/07/12/flask-tutorial-simple-user-registration-and-login
+4. Flask Documentation: https://flask.palletsprojects.com/en/1.1.x/
    
 
 
