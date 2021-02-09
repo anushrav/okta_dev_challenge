@@ -1,4 +1,4 @@
-# okta_dev_challenge
+# Okta_dev_challenge
 This repository hosts the code written by Anushrav Vatsa for a technical exercise. 
 This application leverages Okta's authentication services and web API to manage users.
 This app is built with Flask as the backend and HTML and CSS for webpages.
@@ -46,6 +46,7 @@ pip3 install requirements.txt
 }
 ```
 4. Create a .env file by running `nano .env`
+   Add the following information to that file: 
 
 ```
 BASE_URL=https://{DEV_ID}.okta.com
@@ -53,7 +54,8 @@ OKTA_API_TOKEN={api-token-from-dev-portal}
 ADMIN_GROUP_ID={group-id-for-admin-group}
 APP_SECRET={long-random-string}
 ```
-
+   Press `crtl+ O` to save and `crtl+ X` to exit.
+  
 5. To start the application run `python3 main.py` from the root directory of the project. 
    Navigate to `http://localhost:8080/` to view the homepage. If configured correctly, 
    the application will allow your users and admins to login securely. 
