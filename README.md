@@ -58,7 +58,7 @@ APP_SECRET={long-random-string}
   
 5. To start the application run `python3 main.py` from the root directory of the project. 
    Navigate to `http://localhost:8080/` to view the homepage. If configured correctly, 
-   the application will allow your users and admins to login securely. 
+   the application shoudl open the welcome page. Users and Admins can now login securely from this page.
    
    
 ## Notes:
