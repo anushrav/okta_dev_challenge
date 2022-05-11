@@ -4,4 +4,4 @@ flask-oidc==1.4.0
 Jinja2==2.11.2
 python-dotenv==0.15.0
 requests==2.25.1
-WTForms==2.3.3
+WTForms==3.0.0a1
