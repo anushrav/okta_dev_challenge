@@ -1,5 +1,5 @@
 asyncio==3.4.3
-Flask==1.1.2
+Flask==2.2.5
 flask-oidc==1.4.0
 Jinja2==2.11.2
 python-dotenv==0.15.0
